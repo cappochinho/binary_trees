@@ -20,15 +20,5 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	new->left = NULL;
 	new->right = NULL;
 
-	binary_tree_t *p_work = parent;
-
-	if (p_work == NULL)
-		return (NULL);
-
-	if (value < p_work->n)
-		p_work->left = new;
-	else
-		p_work->right = new;
-
-	return (p_work);
+	return (new);
 }
